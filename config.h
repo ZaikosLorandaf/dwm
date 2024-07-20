@@ -10,10 +10,10 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=12";
+// static const char *fonts[]          = { "monospace:size=10" };
+// static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#a6a6a6";	/* tags background and dwm logo (top right) */
-static const char col_gray2[]       = "#808080";	/* inactive window edge color */	
+static const char col_gray2[]       = "#808080";	/* inactive window edge color */
 static const char col_gray3[]       = "#4c0080";	/* inactive tags tiny square colors */
 static const char col_gray4[]       = "#000000";	/* active window title and tag number */
 static const char col_cyan[]        = "#004d4d";	/* title main section */
@@ -27,6 +27,14 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;*/
+
+#ifdef HOST_DOOMBRINGER
+  static const char *fonts[] = { "monospace:size=12" };
+  static const char dmenufont[] = { "monospace:size=16" };
+#else
+  static const char *fonts[] = { "monospace:size=10" };
+  static const char dmenufont[] = { "monospace:size=14" };
+#endif
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */

@@ -6,6 +6,15 @@ include config.mk
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
 
+# Determine Hostname for different config between laptop and desktop computer
+HOST := $(shell uname -n)
+
+ifeq ($(HOST), doombringer)
+	CONFIG_FLAG = -D HOST_DOOMBRINGER
+else
+	CONFIG_FLAG = -D HOST_DEFAULT
+endif
+
 all: dwm
 
 .c.o:
