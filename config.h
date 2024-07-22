@@ -56,7 +56,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-  { "discord",  NULL,       NULL,       1 << 7,       0,           -1 },
+#ifdef HOST_DOOMBRINGER
+  { "discord",  NULL,       NULL,       1,            0,            1 },
+#else
+  { "discord",  NULL,       NULL,       1 << 7,       0,            0 },
+#endif
   { "Thunar",   NULL,       NULL,       0,            1,           -1 },
   { "steam",    NULL,       NULL,       1 << 4,       0,           -1 },
 };

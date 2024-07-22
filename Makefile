@@ -10,15 +10,16 @@ OBJ = ${SRC:.c=.o}
 HOST := $(shell uname -n)
 
 ifeq ($(HOST), doombringer)
-	CONFIG_FLAG = -D HOST_DOOMBRINGER
+#define
+	CONFIG_FLAG = -DHOST_DOOMBRINGER
 else
-	CONFIG_FLAG = -D HOST_DEFAULT
+	CONFIG_FLAG = -DHOST_DEFAULT
 endif
 
 all: dwm
 
 .c.o:
-	${CC} -c ${CFLAGS} $<
+	${CC} -c ${CFLAGS} ${CONFIG_FLAG} $<
 
 ${OBJ}: config.h config.mk
 
