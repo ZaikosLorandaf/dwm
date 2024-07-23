@@ -62,7 +62,7 @@ static const Rule rules[] = {
   { "discord",  NULL,       NULL,       1 << 7,       0,            0 },
 #endif
   { "Thunar",   NULL,       NULL,       0,            1,           -1 },
-  { "steam",    NULL,       NULL,       1 << 4,       0,           -1 },
+  { "steam",    NULL,       NULL,       1 << 4,       0,            0 },
 };
 
 /* layout(s) */
