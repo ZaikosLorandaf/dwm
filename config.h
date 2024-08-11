@@ -10,8 +10,6 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-// static const char *fonts[]          = { "monospace:size=10" };
-// static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#a6a6a6";	/* tags background and dwm logo (top right) */
 static const char col_gray2[]       = "#808080";	/* inactive window edge color */
 static const char col_gray3[]       = "#4c0080";	/* inactive tags tiny square colors */
@@ -32,7 +30,7 @@ static const unsigned int borderalpha = OPAQUE;*/
   static const char *fonts[] = { "monospace:size=12" };
   static const char dmenufont[] = { "monospace:size=16" };
 #else
-  static const char *fonts[] = { "monospace:size=10" };
+  static const char *fonts[] = { "monospace:size=14" };
   static const char dmenufont[] = { "monospace:size=14" };
 #endif
 
@@ -56,10 +54,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+
 #ifdef HOST_DOOMBRINGER
-  { "discord",  NULL,       NULL,       1,            0,            1 },
+  { "vesktop",  NULL,       NULL,       1,            0,            1 },
 #else
-  { "discord",  NULL,       NULL,       1 << 7,       0,            0 },
+  { "vesktop",  NULL,       NULL,       1 << 7,       0,            0 },
 #endif
   { "Thunar",   NULL,       NULL,       0,            1,           -1 },
   { "steam",    NULL,       NULL,       1 << 4,       0,            0 },
@@ -112,7 +111,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             		      XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },

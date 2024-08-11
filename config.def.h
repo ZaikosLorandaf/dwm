@@ -30,7 +30,7 @@ static const unsigned int borderalpha = OPAQUE;*/
   static const char *fonts[] = { "monospace:size=12" };
   static const char dmenufont[] = { "monospace:size=16" };
 #else
-  static const char *fonts[] = { "monospace:size=10" };
+  static const char *fonts[] = { "monospace:size=14" };
   static const char dmenufont[] = { "monospace:size=14" };
 #endif
 
@@ -56,9 +56,9 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 
 #ifdef HOST_DOOMBRINGER
-  { "discord",  NULL,       NULL,       1,            0,            1 },
+  { "vesktop",  NULL,       NULL,       1,            0,            1 },
 #else
-  { "discord",  NULL,       NULL,       1 << 7,       0,            0 },
+  { "vesktop",  NULL,       NULL,       1 << 7,       0,            0 },
 #endif
   { "Thunar",   NULL,       NULL,       0,            1,           -1 },
   { "steam",    NULL,       NULL,       1 << 4,       0,            0 },
