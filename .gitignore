@@ -2,5 +2,6 @@
 *.l
 *.json
 *.png
+.cache
 dwm
 dwmc
