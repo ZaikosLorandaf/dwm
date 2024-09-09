@@ -1,0 +1,6 @@
+*.o
+*.l
+*.json
+*.png
+dwm
+dwmc
