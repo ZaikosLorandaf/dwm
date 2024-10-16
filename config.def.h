@@ -60,7 +60,7 @@ static const Rule rules[] = {
 #else
   { "vesktop",  NULL,       NULL,       1 << 7,       0,            0 },
 #endif
-  { "Thunar",   NULL,       NULL,       0,            1,           -1 },
+  { "Nemo",     NULL,       NULL,       0,            1,           -1 },
   { "steam",    NULL,       NULL,       1 << 4,       0,            0 },
 };
 

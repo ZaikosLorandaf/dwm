@@ -18,6 +18,8 @@ endif
 
 all: dwm
 
+## linktime Optimisation -flto
+
 .c.o:
 	${CC} -c ${CFLAGS} ${CONFIG_FLAG} $<
 
